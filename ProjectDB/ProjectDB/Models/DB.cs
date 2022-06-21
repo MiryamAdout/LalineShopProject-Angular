@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace ProjectDB.Models
+{
+    public class DB
+    {
+        public static List<Recipe> listRecipes = new List<Recipe>() {
+        new Recipe(7899, "עוגת ביסקויטים בדובוני שוקולד חלב", 2222, 15, 1, new DateTime(2021,11,14),new string[]{ "להשים במקפיא לשעתיים","2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"  }, new string[]{ "לשפוך את כל החומרים לקערה", "לערבב היטב עד לאיחוד", "לשפוך את העיסה לתבנית צורות", "לנעוץ מקל ארטיק"}, 13, "https://st1.foodsd.co.il/Images/Recipes/xxl/Recipe-10808-sbegufjcbdsz5tan.jpg"),
+        new Recipe(1123, "אלפחורס קינדר", 2222, 40,3, new DateTime(2021,11,14), new string[]{"קג קמח","2 ביצים","שמנת מתוקה","כוס חלב","50 גרם חמאה","מלית ריבת חלב","קוקוס" },new string[]{ "לשפוך את כל המוצרים לקערה חוץ מהקוקוס והריבת חלב","ליצור עגולים שטוחים","למלות בין כל 2 עגולי בצק ריבת חלב","לטבול את שולי העגול בקוקוס","להכניס לתנור על 180 מעלות" }, 11, "https://d3o5sihylz93ps.cloudfront.net/wp-content/uploads/sites/2/2021/04/25161006/1-355x236.jpg"),
+        new Recipe(5643, "ארטיק נוטלה", 3333, 60, 4, new DateTime(2021,11,14), new string[]{"2 חבילות שוקולד חום חלבי","חבילת שוקולד לבן חלבי","50 גרם חמאה","כפית סוכר","חצי כוס קפה נמס","שמנת מתוקה","20 מקלות ארטיק" },new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" }, 11, "https://d3o5sihylz93ps.cloudfront.net/wp-content/uploads/sites/2/2019/05/07141851/homeubuntureleasesrelease_20190505071537webappmu-pluginsfoody-white-labeltmp1557227931-cxIgdh.jpg"),
+        new Recipe(4432, "עוגיות לימון בקצפת", 7777, 22, 2, new DateTime(2021,11,14), new string[]{"2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10" },new string[]{"לערבב את הקמח סוכר שמן והשמרים בקערה", "לשפוך מפרורי הבצק שנוצר לתבנית", "לחמם תנור על 180 מעלות", "להשים כרבע שעה את הבצק בתנור","לקחת מפרורי הכוס ולשפוך כרבע בכל כוס", "להקציף את השמנת מתוקה ולשפוך על 3/4 הנותר בכוס","לחתוך לפרוסות דקות את הלימונים","להשים פרוסת לימון בכל כוס","להקפיא כשעה" }, 10, "https://haomanst.com/wp-content/uploads/2020/09/sukkot-2020-haomanst.com-3484_1.jpg"),
+        new Recipe(6776, "קרמבו אוראו", 3333, 80,5, new DateTime(2021,11,14), new string[]{ "לערבב את הקמח סוכר שמן והשמרים בקערה", "לשפוך מפרורי הבצק שנוצר לתבנית", "לחמם תנור על 180 מעלות", "להשים כרבע שעה את הבצק בתנור","לקחת מפרורי הכוס ולשפוך כרבע בכל כוס", "להקציף את השמנת מתוקה ולשפוך על 3/4 הנותר בכוס","לחתוך לפרוסות דקות את הלימונים","להשים פרוסת לימון בכל כוס","להקפיא כשעה"   },new string[]{ "2 חבילות שוקולד חום חלבי","חבילת שוקולד לבן חלבי","50 גרם חמאה","כפית סוכר","חצי כוס קפה נמס","שמנת מתוקה","20 מקלות ארטיק"}, 11, "https://d3o5sihylz93ps.cloudfront.net/wp-content/uploads/sites/2/2021/04/27152144/%D7%A4%D7%95%D7%93%D7%99-%D7%A7%D7%A8%D7%99%D7%9F-%D7%92%D7%95%D7%A8%D7%9F-12-%D7%91%D7%90%D7%A4%D7%A8%D7%99%D7%9C24895-355x236.jpg"),
+        new Recipe(5433, "עוגת תותים", 7777, 72,5, new DateTime(2021,11,14), new string[]{"קג תותים","קג קמח","2 ביצים","שמנת מתוקה","כוס חלב","50 גרם חמאה","מלית ריבת חלב","קוקוס"  },new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים"  }, 10, "https://d3o5sihylz93ps.cloudfront.net/wp-content/uploads/sites/2/2019/05/07141907/homeubuntureleasesrelease_20190505071537webappmu-pluginsfoody-white-labeltmp1557227946-uEEHTv.jpg"),
+        new Recipe(8999, "קראפ צרפתי עם קצפת", 3333, 15,1, new DateTime(2021,11,14), new string[]{"קג קמח","2 ביצים","שמנת מתוקה","כוס חלב","50 גרם חמאה","מלית ריבת חלב","קוקוס"  },new string[]{"לשפוך את כל המוצרים לקערה חוץ מהקוקוס והריבת חלב","ליצור עגולים שטוחים","למלות בין כל 2 עגולי בצק ריבת חלב","לטבול את שולי העגול בקוקוס","להכניס לתנור על 180 מעלות" }, 13, "https://katsefet.co.il/wp-content/uploads/2020/09/sivan_shuv-ami_114.jpg"),
+        new Recipe(1234,"שייק פירות",3333,15,1,new DateTime(2021,11,14),new string[]{ "2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" },12,"https://cdn.groo.co.il/_media/media/20291/217708.jpg"),
+           new Recipe(6689,"שוקו חם",7777,30,2,new DateTime(2021,11,14),new string[]{ "2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" },11,"https://www.chef-lavan.co.il/uploads/f_58559bf456293_1482005492.jpg"),
+   new Recipe(2534,"יוגורט פרוזן",3333,25,2,new DateTime(2021,11,14),new string[]{ "2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" },10,"https://files.mishloha.co.il/files/menu_food_pic/FIL_6497599_637484643636163687.jpg?v=2"),
+        new Recipe(9008, "בומב שוקולד", 3333, 30, 3, new DateTime(2021,11,14), new string[]{"2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" }, 12, "https://d3o5sihylz93ps.cloudfront.net/wp-content/uploads/sites/2/2019/05/17145323/%D7%91%D7%95%D7%9E%D7%91-%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%931.jpg"),
+
+   new Recipe(9786,"עוגת דובדבנים",7777,60,3,new DateTime(2021,11,14),new string[]{ "2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" },10,"https://www.oogio.net/wp-content/uploads/2015/05/cherry_and_mascarpone_charlotte3-s.jpg"),
+   new Recipe(1235,"מוס פררו רושה",2222,50,2,new DateTime(2021,11,14),new string[]{ "2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" },13,"https://d3o5sihylz93ps.cloudfront.net/wp-content/uploads/2019/11/07090836/%D7%97%D7%98%D7%99%D7%A4%D7%99-%D7%A4%D7%A8%D7%A8%D7%95.jpg"),
+        new Recipe(8976,"עוגת במבה",7777,45,4,new DateTime(2021,11,14),new string[]{ "2 כוסות קמח","קצפת מתוקה להקצפה","3 לימון","כוס סוכר","3/4 כוס שמן","2 כפות שמרים","כוסיות 10"},new string[]{ "לשפוך את כל החומרים לקערה","לערבב היטב עד לאיחוד","לשפוך את העיסה לתבנית צורות","לנעוץ מקל ארטיק","להשים במקפיא לשעתיים" },10,"https://happykitchen.co.il/wp-content/uploads/2018/12/%D7%A2%D7%95%D7%92%D7%AA-%D7%A1%D7%A4%D7%A8%D7%99%D7%A0%D7%A7%D7%9C%D7%A1.jpg"),
+
+        };
+        public static List<User> listUser = new List<User>() {
+        new User(10,"Miryam","Pardo 3","m0548462581@gmail.com",1221),
+        new User(11,"Tamar","Ganey Gad 7","t0548462581@gmail.com",1441),
+        new User(12,"Sari","Chida 9","s0548462581@gmail.com",1881),
+        new User(13,"Esti","Tzirilzon 11","e0548462581@gmail.com",1991),
+        };
+        public static List<Category> listCat = new List<Category>()
+        {
+            new Category(2222,"milky","🍩"),
+               new Category(7777,"parve","🎂"),
+                  new Category(3333,"sweeter","🧁"),
+        };
+    }
+}

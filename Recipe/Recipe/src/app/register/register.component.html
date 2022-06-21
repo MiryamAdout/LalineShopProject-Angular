@@ -1,0 +1,24 @@
+<h1>עלייך להרשם !!</h1>
+<form class="myForm">
+    <div class="allAdd">  
+    <div class="form-group" >
+        <label for="exampleInputEmail1">שם:</label>
+        <input type="text" name="oo"  class="form-control" id="exampleInputEmail1" placeholder="User Name" [(ngModel)]="emptyUser.name"/>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">סיסמא:</label>
+        <input type="password" name="o" class="form-control" id="exampleInputEmail1" placeholder="User Password" [(ngModel)]="emptyUser.password"/>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">כתובת:</label>
+        <input type="tel" name="l" class="form-control" id="exampleInputEmail1" placeholder="User Address" [(ngModel)]="emptyUser.address"/>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">מייל:</label>
+        <input type="mail" name="g" class="form-control" id="exampleInputEmail1" placeholder="User Mail" [(ngModel)]="emptyUser.mail"/>
+    </div>
+     <input type="button" class="btn btn-primary btn-lg" value="הרשם" (click)="registerUser()" /> 
+
+    </div>
+</form>

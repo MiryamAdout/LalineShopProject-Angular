@@ -1,0 +1,18 @@
+<div class="main" > 
+     
+    <div class="card" style="width: 18rem;">
+<a (click)="showDetailRec()">
+  <img [src]="recipeSmall.picture" class="card-img-top" />
+</a>
+        <div class="card-body">
+          <h5 class="card-title"><strong class="tit"> המתכון </strong></h5>
+          <p class="card-text" ><strong>שם: </strong>{{recipeSmall.nameOfRe}}</p> 
+          <p class="card-text"><strong>משך הכנה: </strong> {{recipeSmall.timePreMinu|time}} </p> 
+          <p class="card-text"><strong>דרגת קושי: </strong ><span [outerHTML]="recipeSmall.levelDif|asterisks"></span>  </p>
+          </div> 
+         
+      </div>
+      
+      <router-outlet></router-outlet>
+</div>
+

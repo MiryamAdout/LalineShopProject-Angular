@@ -1,0 +1,25 @@
+<div class="name" *ngIf="checkNameUser()">
+  <p>Hellow To {{nameUserNow.name}}  🙋‍♀️   </p>
+</div>
+<form class="myForm">
+    <label>משך הכנה: </label>
+ <input type="text" placeholder="משך הכנה" name="n" #time (keydown.enter)="filterTime(time.value)" /> 
+    <label> דרגת קושי: </label>
+ <input type="number" placeholder="דרגת קושי" name="l" #level (keydown.enter)="filterLevel(level.value)" /> 
+    <label>בחר סוג קטגוריה:</label>
+    <select #cat (change)="filterCat(cat.value)">
+        <option *ngFor="let o of arrCat">
+       <p>{{o}}</p>
+        </option>
+    </select>
+
+    <input type="button" class="btn btn-primary btn-lg" value="נקה סינון" (click)="clearFilter(time.value,level.value,cat.value)"/>
+</form>  
+
+<div class="main">
+ <div *ngFor="let r of arrRecipeSinun">
+   <a routerLink="smallRec"></a> 
+<app-small-recipe [recipeSmall]="r"></app-small-recipe>
+<router-outlet></router-outlet>
+</div>
+</div> 

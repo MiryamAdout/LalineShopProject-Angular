@@ -1,0 +1,48 @@
+.dmain{
+ 
+    border: 8px solid rgb(162, 244, 247); 
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    margin-left:28%;
+    margin-top: 3%; 
+}
+.btn-lg{
+    background-color: rgb(248, 51, 149);
+     width: 30%;
+     border: rgb(3, 153, 153);
+     color:black;
+     text-align: center;
+     margin-right: 35%;
+     margin-top: 2%;
+     margin-bottom: 2%;
+ }
+.list{
+    width: 85%;
+    direction: rtl;
+}
+form-group{
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+label{
+    color: rgb(248, 51, 149);
+    font-size: 33px;
+    font-family: "Verdana,sans-serif";
+}
+.det{
+    color: black;
+    font-size:22px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(248, 51, 149);
+    font-size: 40px;
+    font-family: "Verdana,sans-serif";
+    margin-left:42%;
+    margin-top: 2%;
+    margin-bottom: -2%;
+}

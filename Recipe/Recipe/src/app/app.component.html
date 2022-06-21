@@ -1,0 +1,28 @@
+<div class="navv">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li  class="nav-item">
+            <a routerLink="allRec" class="nav-link" >כל המתכונים</a>
+          </li>
+        <li *ngIf="ifLogin()"  class="nav-item" >
+            <a routerLink="addRec"  class="nav-link" >הוספת מתכון</a>
+          </li>
+        <li  class="nav-item" >
+          <a routerLink="regis/:l"  class="nav-link" >הרשמה</a>
+        </li>
+        <li   class="nav-item">
+            <a routerLink="login" class="nav-link" >כניסה</a>
+          </li>
+          <li *ngIf="ifLogin()" class="nav-item" >
+            <a (click)="logout()"  class="nav-link" >יציאה</a>
+          </li> 
+      </ul> 
+      
+    </div>
+   
+  </nav>
+
+</div>
+
+<router-outlet></router-outlet>

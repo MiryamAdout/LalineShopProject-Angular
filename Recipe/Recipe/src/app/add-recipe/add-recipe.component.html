@@ -1,0 +1,61 @@
+<h1>:Add Your Recipe</h1>
+<form class="myForm">
+<div class="allAdd">
+    <div class="form-group">
+    <label for="exampleInputEmail1">קוד מתכון:</label>
+    <input type="password" class="form-control" id="exampleInputEmail1"  name="p" minlength="5"  #pas="ngModel" [(ngModel)]="emptyRecipe.codeRec" placeholder="Code Recipe"/>
+    <div *ngIf="pas.invalid"> קוד לא תקין לפחות 5 תווים</div>
+    </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">שם מתכון:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"  name="n" required   #nam="ngModel" [(ngModel)]="emptyRecipe.nameOfRe" placeholder="Name Recipe"/>
+    <div *ngIf="nam.errors?.required">שם מתכון חובה!!</div>
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">זמן הכנה:</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  #tim="ngModel" name="t" [(ngModel)]="emptyRecipe.timePreMinu" placeholder="Time Prepare"/>
+    <div *ngIf="tim.touched">נגעת!</div>
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">דרגת קושי:</label>
+    <input type="number" class="form-control" id="exampleInputEmail1"  #dar="ngModel"  pattern="[1-5]{1}" name="d" [(ngModel)]="emptyRecipe.levelDif" placeholder="Level Difficult"/>
+    <div *ngIf="dar.errors&&dar.errors.pattern">מספר אחד שמייצג דרגת קושי מ1 עד 5</div>
+</div>
+<div class="form-group">
+    <label for="exampleInputEmail1">תאריך הוספת המתכון לאתר:</label>
+    <input type="date" class="form-control" id="exampleInputEmail1"  #dat="ngModel" name="f" [(ngModel)]="emptyRecipe.dateAdd" placeholder="Date Add"  />
+    <div *ngIf="dat.touched">נגעת!</div>
+</div>
+<div class="form-group" >
+    <label for="exampleInputEmail1">רשימת הרכיבים:</label>
+    <div *ngFor="let y of emptyRecipe.arrListComp;let i=index;trackBy:trackByIdx">
+    <input type="text" class="form-control"  id="exampleInputEmail1"
+       [(ngModel)]="emptyRecipe.arrListComp[i]" name="pp{{i}}"
+      (keyup)="clearTidy2()" placeholder="? What I need"/>
+    </div>
+</div>
+<div class="form-group" >
+    <label for="exampleInputEmail1">אופן ההכנה:</label>
+    <div *ngFor="let y of emptyRecipe.arrPreparation;let i=index;trackBy:trackByIdx">
+    <input type="text" class="form-control" id="exampleInputEmail1" 
+      [(ngModel)]="emptyRecipe.arrPreparation[i]" name="dd{{i}}"
+      (keyup)="clearTidy()" placeholder="? How I Prepare"/> 
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="exampleInputEmail1">תמונה:</label>
+    <input type="text" class="form-control" id="exampleInputEmail1"  #pic="ngModel" name="x" [(ngModel)]="emptyRecipe.picture" placeholder="Url Of Picture"/>
+    <div *ngIf="pic.errors?.touched"> ניתוב תמונה לא תקין!</div>
+</div>
+<div>
+    <label>בחר סוג קטגוריה:</label>
+    <select [(ngModel)]="emptyRecipe.codeCateg">
+        <option *ngFor="let o of arrCategory">
+       <p>{{o}}</p>
+        </option>
+    </select>
+</div>
+<input type="button" class="btn btn-primary btn-lg" (click)="add()" value="הוסף"/>
+</div>
+</form>

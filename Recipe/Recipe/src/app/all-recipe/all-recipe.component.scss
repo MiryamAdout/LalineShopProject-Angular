@@ -1,0 +1,52 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; 
+    margin-top: -10%;
+}
+select{
+   width: 8%;
+    background-color:  rgb(248, 51, 149);
+  
+}
+.nameUser{
+    color: rgb(248, 51, 149);
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 40%;
+    margin-bottom: -3%;
+    margin-top: 2%;
+}
+.name{
+    margin-left:2%;
+}
+.myForm{
+    direction: rtl;
+    margin-top: 1.5%;
+    margin-bottom: 10%;
+    margin-right: 8%;
+}
+p{
+    color: rgb(248, 51, 149);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40%; 
+    margin-top: 1%; 
+}
+label{
+    color: rgb(248, 51, 149);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    }
+.btn-lg{
+    background-color: rgb(248, 51, 149);
+     width: 13%;
+     border: rgb(3, 153, 153);
+     color:black;
+     text-align: center;
+     margin-right:4.5%;
+     margin-top: -1%;
+ }
+

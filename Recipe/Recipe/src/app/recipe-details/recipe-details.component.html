@@ -1,0 +1,52 @@
+<h1>פרטי המתכון שלי:</h1>
+<form class="dmain">
+<div class="list">
+  <div>
+    <img [src]="detailRec.picture" class="card-img-top"/>
+  </div>
+  <div class="form-group">
+  <label><strong>קוד מתכון:</strong></label>
+ <div class="det"> {{detailRec.codeRec}}</div>
+ </div>
+ <div class="form-group">
+  <label><strong>שם מתכון:</strong></label>
+  <div class="det">{{detailRec.nameOfRe}}</div>
+   </div> 
+   <div class="form-group">
+    <label><strong>קוד קטגוריה:</strong></label>
+      <div class="det" [ngSwitch]="detailRec.codeCateg">
+        <div *ngSwitchCase="2222"><span class="material-icons"> 🍩 </span>  </div>
+        <div *ngSwitchCase="7777"><span class="material-icons"> 🎂 </span> </div>
+        <div *ngSwitchCase="3333"><span class="material-icons"> 🧁  </span>  </div>
+      </div>
+     </div> 
+     <div class="form-group">
+      <label><strong>משך הכנה בדקות:</strong></label>
+     <div class="det"> {{detailRec.timePreMinu}} דקות</div>
+       </div> 
+       <div class="form-group">
+        <label><strong>דרגת קושי:</strong></label>
+      <div class="det"> {{ detailRec.levelDif}} רמת קושי</div>
+         </div> 
+         <div class="form-group">
+          <label><strong>תאריך הוספת המוצר לאתר</strong></label>
+          <div class="det">{{detailRec.dateAdd}}</div>
+    </div> 
+           <label><strong>רכיבים:</strong></label>
+           <div class="form-group" *ngFor="let l of detailRec.arrListComp">
+           <div><span class="material-icons" >🥚</span>  {{l}}</div> 
+             </div> 
+             <label ><strong>אופן ההכנה:</strong></label>
+             <div class="form-group" > 
+               <ol>
+              <li *ngFor="let p of detailRec.arrPreparation">{{p}}</li>      
+              </ol>
+            </div>      
+             <div class="form-group">
+                <label><strong>קוד משתמש:</strong></label>
+               <div class="det"> {{detailRec.codeSomeEnPr}}</div>
+                 </div> 
+               <input *ngIf="checkWhoUser()" type="button"  class="btn btn-primary btn-lg" value="delete" (click)="delRecipe()" />
+                                                                         
+ </div>
+</form>  

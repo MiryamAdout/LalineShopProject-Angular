@@ -1,0 +1,3 @@
+export class Recipe{
+    constructor(public codeRec:number,public nameOfRe:string,public codeCateg:string,public timePreMinu:number,public levelDif:number,public dateAdd:Date=new Date(),public arrListComp:string[]=[],public arrPreparation:string[]=[],public codeSomeEnPr:number,public picture:string){
+ }}                                                                                                                                                                                  
